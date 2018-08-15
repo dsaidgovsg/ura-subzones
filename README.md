@@ -4,7 +4,9 @@ Simple library for dealing with URA subzones
 ## Example use
 
 ```sh
-$ npm install ura-subzones
+$ npm install ura-subzones # (not available yet)
+OR
+$ npm install git+ssh://git@github.com/datagovsg/ura-subzones.git
 ```
 
 ```js
