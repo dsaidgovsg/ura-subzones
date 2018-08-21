@@ -7,5 +7,8 @@ describe("Simple tests on subzones", () => {
 
     expect(index.getSubzoneAtPoint([103.673784, 1.256942]).properties.nice_name)
       .toBe("Jurong Island And Bukom")
+
+    expect(index.getSubzoneAtPoint([103.777475, 1.295793]).properties.nice_name)
+      .toBe("National University Of Singapore")
   })
 })
