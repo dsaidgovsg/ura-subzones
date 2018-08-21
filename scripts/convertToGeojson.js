@@ -11,11 +11,11 @@ const kml = new DOMParser().parseFromString(fs.readFileSync(__dirname + '/../dat
 const converted = tj.kml(kml)
 
 for (let feature of converted.features) {
-  feature.properties.nice_name = feature.properties.name.toLowerCase()
+  feature.properties.niceName = feature.properties.name.toLowerCase()
     .replace(/(?:^| )[a-z]/g, s => s.toUpperCase()) // Convert names to title case
     .replace('S\'pore', 'Singapore') // Replace known contractions
     .replace('(mp)', '(MP)') // Replace known contractions
-  console.log(feature.properties.nice_name)
+  console.log(feature.properties.niceName)
 }
 
 fs.writeFileSync(__dirname + '/../data/subzones.json', JSON.stringify(converted, null, 2))
